@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11130f">
+    <meta name="description" content="Контакты KvestLabb: адрес квест-клуба, телефон, почта, часы работы и расположение на Яндекс Карте.">
+    <title>Контакты — KvestLabb</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/validation.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Главная навигация">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" aria-label="KvestLabb — главная"><svg class="icon brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4l11-2v19M12 12h1"/></svg><span>Kvest<span class="accent">Labb</span></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Квесты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rules.html">Правила</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="schedule.html">Расписание</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contacts.html" aria-current="page">Контакты</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light nav-book" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal">Забронировать <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-heading">
+        <div class="container">
+          <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Контакты</li>
+            </ol>
+          </nav>
+          <div class="eyebrow">KvestLabb / Контакты</div>
+          <h1>Будем на связи</h1>
+          <p class="page-intro">
+            Позвони, напиши или загляни к нам перед игрой. Здесь — наши контакты и карта для твоего визита.
+          </p>
+        </div>
+      </section>
+      <section class="contacts-section" aria-label="Контактная информация">
+        <div class="container">
+          <div class="contact-panel">
+            <div class="row g-4 contact-info">
+              <div class="col-md-4">
+                <h2 class="contact-label">Адрес</h2>
+                <p>Москва,<br>ул. Загадочная, 13</p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="contact-label">Телефон и время работы</h2>
+                <a class="contact-phone" href="tel:+79099268067">+79099268067</a>
+                <p class="mt-2">Ежедневно · 10:00–23:00</p>
+              </div>
+              <div class="col-md-4">
+                <h2 class="contact-label">Почта</h2>
+                <a href="mailto:hello@kvestlabb.example">hello@kvestlabb.example</a>
+              </div>
+            </div>
+            <div class="contact-map" id="club-map" role="region" aria-labelledby="club-map-heading">
+              <div class="contact-map-heading">
+                <div>
+                  <span class="contact-label accent">Планируешь визит?</span>
+                  <h2 id="club-map-heading">Найди нас на карте</h2>
+                  <p>Москва, ул. Загадочная, 13</p>
+                </div>
+                <a class="btn btn-outline-light" href="https://yandex.ru/maps/?mode=search&amp;text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%97%D0%B0%D0%B3%D0%B0%D0%B4%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%2C%2013" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="contact-map-frame">
+                <iframe src="https://yandex.ru/map-widget/v1/?mode=search&amp;text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%97%D0%B0%D0%B3%D0%B0%D0%B4%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%2C%2013&amp;lang=ru_RU" title="Яндекс Карта: Москва, ул. Загадочная, 13" width="1120" height="380" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <p class="form-text mt-3 mb-0">Квест-клуб вымышленный. Адрес и почта приведены в качестве примера. Для загрузки карты нужен интернет.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="navbar-brand" href="index.html" aria-label="KvestLabb — главная"><svg class="icon brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4l11-2v19M12 12h1"/></svg><span>Kvest<span class="accent">Labb</span></span></a>
+            <p class="footer-copy">
+              У каждого выхода есть история.<br>У каждой истории — своя команда.
+            </p>
+          </div>
+          <nav class="footer-nav" aria-labelledby="footer-nav-title">
+            <h2 class="footer-heading" id="footer-nav-title">Навигация</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Квесты</a></li>
+              <li><a href="rules.html">Правила</a></li>
+              <li><a href="schedule.html">Расписание</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <h2 class="footer-heading">На связи</h2>
+            <address class="footer-address">
+              <p class="footer-contact"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Москва, ул. Загадочная, 13</span></p>
+              <a class="footer-phone footer-contact" href="tel:+79099268067"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L9 10.7a16 16 0 0 0 4.3 4.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 2.7 3Z"/></svg><span>+79099268067</span></a>
+              <p class="footer-contact"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ежедневно · 10:00–23:00</span></p>
+              <a class="footer-email footer-contact" href="mailto:hello@kvestlabb.example"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>hello@kvestlabb.example</span></a>
+            </address>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copyright">© 2026 KvestLabb. Все права защищены</span>
+          <div class="footer-actions">
+            <button class="footer-cta" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal">Забронировать <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <a class="footer-back-top" href="#main">Наверх <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="booking-modal" tabindex="-1" aria-labelledby="booking-title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="booking-title">
+              Начнём твою историю
+            </h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <form id="booking-form" novalidate>
+              <p class="form-note">
+                Все поля обязательны. Это учебная заявка: данные не отправляются и не сохраняются.
+              </p>
+              <div class="mb-3">
+                <label class="form-label" for="booking-quest">Квест</label><select class="form-select" id="booking-quest" name="quest" required aria-describedby="booking-quest-error booking-quest-info"><option value="">Выберите квест</option><option value="alchemy">Кабинет алхимика</option><option value="signal">Последний сигнал</option><option value="polaris">Экспедиция «Полярис»</option><option value="archive">Архив 13</option><option value="house">Дом без окон</option><option value="treasure">Сокровища капитана</option></select>
+                <div class="form-text" id="booking-quest-info">
+                  Выберите квест, чтобы увидеть стоимость и размер команды.
+                </div>
+                <div class="invalid-feedback" id="booking-quest-error">
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-name">Ваше имя</label><input class="form-control" type="text" id="booking-name" name="booking-name" required autocomplete="name" maxlength="80" placeholder="Даниил" aria-describedby="booking-name-error">
+                  <div class="invalid-feedback" id="booking-name-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-phone">Телефон</label><input class="form-control" type="tel" id="booking-phone" name="booking-phone" required autocomplete="tel" maxlength="24" placeholder="+79099268067" aria-describedby="booking-phone-error">
+                  <div class="invalid-feedback" id="booking-phone-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-date">Дата игры</label><input class="form-control" type="date" id="booking-date" name="booking-date" required aria-describedby="booking-date-error">
+                  <div class="invalid-feedback" id="booking-date-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-players">Количество игроков</label><input class="form-control" type="number" id="booking-players" name="booking-players" required min="2" max="6" step="1" value="2" aria-describedby="booking-players-error">
+                  <div class="invalid-feedback" id="booking-players-error">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="booking-start">Начало</label><input class="form-control" type="time" id="booking-start" name="booking-start" required min="10:00" max="22:00" step="1800" aria-describedby="booking-start-error">
+                  <div class="invalid-feedback" id="booking-start-error">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="booking-end">Окончание</label><input class="form-control" type="time" id="booking-end" name="booking-end" required min="11:00" max="23:00" step="1800" aria-describedby="booking-end-error">
+                  <div class="invalid-feedback" id="booking-end-error">
+                  </div>
+                </div>
+              </div>
+              <p class="form-text mt-3">
+                Клуб открыт с 10:00 до 23:00. Минимум — 1 час, шаг времени — 30 минут. Начало и окончание в один день. Цена — за всю команду; более длинный интервал рассчитывается пропорционально.
+              </p>
+              <div class="booking-summary" aria-live="polite" aria-atomic="true">
+                <div>
+                  <small>Стоимость за команду</small><strong id="booking-total">—</strong>
+                </div>
+                <span class="booking-breakdown" id="booking-breakdown">Выберите квест и время</span>
+              </div>
+              <button class="btn btn-primary w-100" type="submit">Отправить заявку <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            </form>
+            <div class="success-view" id="booking-success" hidden>
+              <div class="success-symbol">
+                <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L20 5"/></svg>
+              </div>
+              <h3 tabindex="-1">
+                Команда, вы в игре!
+              </h3>
+              <p>
+                Учебная заявка сформирована.<br>Реального бронирования и отправки данных не происходит.
+              </p>
+              <p class="success-details" id="booking-details">
+              </p>
+              <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Готово</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <noscript>
+    <p class="container demo-note">
+      Включите JavaScript для работы меню, фильтров, вкладок, карусели, расписания и форм.
+    </p>
+    </noscript>
+  </body>
+</html>

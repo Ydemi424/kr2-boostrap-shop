@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11130f">
+    <meta name="description" content="KvestLabb: каталог квестов. Учебный сайт квест-клуба — шесть историй, расписание и демонстрационное бронирование.">
+    <title>Каталог квестов — KvestLabb</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/validation.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Главная навигация">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" aria-label="KvestLabb — главная"><svg class="icon brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4l11-2v19M12 12h1"/></svg><span>Kvest<span class="accent">Labb</span></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="catalog.html" aria-current="page">Квесты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="rules.html">Правила</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="schedule.html">Расписание</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light nav-book" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal">Забронировать <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-heading">
+        <div class="container">
+          <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Каталог
+              </li>
+            </ol>
+          </nav>
+          <div class="eyebrow">
+            KvestLabb / Каталог
+          </div>
+          <h1>
+            В какую историю<br>отправимся?
+          </h1>
+          <p class="page-intro">
+            Доверьтесь логике, отправьтесь навстречу приключениям или проверьте смелость. У каждой команды есть свой квест.
+          </p>
+        </div>
+      </section>
+      <section class="pb-5" id="quests">
+        <div class="container">
+          <h2 class="visually-hidden">
+            Каталог квестов
+          </h2>
+          <div class="filter-toolbar">
+            <span class="result-count" id="quest-count" role="status">Найдено квестов: 6</span><button class="btn btn-outline-light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#quest-filters" aria-expanded="true" aria-controls="quest-filters"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="8" cy="6" r="2" fill="currentColor"/><circle cx="16" cy="12" r="2" fill="currentColor"/><circle cx="10" cy="18" r="2" fill="currentColor"/></svg>Фильтры</button>
+          </div>
+          <div class="collapse show" id="quest-filters">
+            <form id="quest-filter-form" class="filter-panel">
+              <div class="row g-4 align-items-end">
+                <div class="col-md-5">
+                  <label class="form-label" for="genre-filter">Жанр</label><select class="form-select" id="genre-filter"><option value="all">Все жанры</option><option value="horror">Хоррор</option><option value="logic">Логика</option><option value="adventure">Приключения</option></select>
+                </div>
+                <div class="col-md-5">
+                  <label class="form-label" for="price-filter">До <output id="price-output" for="price-filter">4 500</output> ₽ за команду / час</label><input class="form-range" type="range" id="price-filter" min="2800" max="4500" step="100" value="4500" aria-label="Максимальная цена за команду в час">
+                </div>
+                <div class="col-md-2">
+                  <button class="btn btn-outline-light btn-sm w-100" type="reset">Сбросить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="row g-4" id="quest-grid">
+            <div class="col-md-6 col-xl-4 quest-item" data-genre="logic" data-price="3200">
+              <article class="card quest-card">
+                <div class="quest-cover">
+                  <img src="assets/images/alchemy.jpg" alt="Атмосферная иллюстрация квеста «Кабинет алхимика»" width="900" height="600" loading="lazy"><span class="quest-badge">Хит</span><span class="quest-age">12+</span>
+                </div>
+                <div class="quest-body">
+                  <span class="quest-genre">Логика</span>
+                  <h3>
+                    Кабинет алхимика
+                  </h3>
+                  <p class="quest-description">
+                    В мастерской исчезнувшего учёного всё связано со временем. Найдите формулу, пока часы не замкнули круг.
+                  </p>
+                  <div class="quest-meta">
+                    <span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6M22 21v-3a7 7 0 0 0-5-6"/></svg>2–5 игроков</span><span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>от 60 минут</span>
+                  </div>
+                  <div class="difficulty-row">
+                    <span>Сложность</span><span class="difficulty-bars" role="img" aria-label="Сложность: 3 из 5"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class=""></i><i class=""></i></span>
+                  </div>
+                  <div class="quest-bottom">
+                    <div class="quest-price">
+                      <strong>от 3 200 ₽</strong><small>за команду / час</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal" data-quest="alchemy" aria-label="Забронировать квест «Кабинет алхимика»">В игру <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 quest-item" data-genre="horror" data-price="4200">
+              <article class="card quest-card">
+                <div class="quest-cover">
+                  <img src="assets/images/signal.jpg" alt="Атмосферная иллюстрация квеста «Последний сигнал»" width="900" height="600" loading="lazy"><span class="quest-badge">Хит</span><span class="quest-age">16+</span>
+                </div>
+                <div class="quest-body">
+                  <span class="quest-genre">Хоррор</span>
+                  <h3>
+                    Последний сигнал
+                  </h3>
+                  <p class="quest-description">
+                    Заброшенная станция снова вышла в эфир. Ответьте на сигнал и выясните, кто ждёт вас по ту сторону двери.
+                  </p>
+                  <div class="quest-meta">
+                    <span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6M22 21v-3a7 7 0 0 0-5-6"/></svg>2–6 игроков</span><span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>от 60 минут</span>
+                  </div>
+                  <div class="difficulty-row">
+                    <span>Сложность</span><span class="difficulty-bars" role="img" aria-label="Сложность: 4 из 5"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class=""></i></span>
+                  </div>
+                  <div class="quest-bottom">
+                    <div class="quest-price">
+                      <strong>от 4 200 ₽</strong><small>за команду / час</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal" data-quest="signal" aria-label="Забронировать квест «Последний сигнал»">В игру <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 quest-item" data-genre="adventure" data-price="3600">
+              <article class="card quest-card">
+                <div class="quest-cover">
+                  <img src="assets/images/polaris.jpg" alt="Атмосферная иллюстрация квеста «Экспедиция «Полярис»»" width="900" height="600" loading="lazy"><span class="quest-badge new">Новинка</span><span class="quest-age">12+</span>
+                </div>
+                <div class="quest-body">
+                  <span class="quest-genre">Приключения</span>
+                  <h3>
+                    Экспедиция «Полярис»
+                  </h3>
+                  <p class="quest-description">
+                    Последняя запись полярной экспедиции обрывается на полуслове. Восстановите маршрут и верните команду домой.
+                  </p>
+                  <div class="quest-meta">
+                    <span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6M22 21v-3a7 7 0 0 0-5-6"/></svg>2–6 игроков</span><span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>от 60 минут</span>
+                  </div>
+                  <div class="difficulty-row">
+                    <span>Сложность</span><span class="difficulty-bars" role="img" aria-label="Сложность: 3 из 5"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class=""></i><i class=""></i></span>
+                  </div>
+                  <div class="quest-bottom">
+                    <div class="quest-price">
+                      <strong>от 3 600 ₽</strong><small>за команду / час</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal" data-quest="polaris" aria-label="Забронировать квест «Экспедиция «Полярис»»">В игру <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 quest-item" data-genre="logic" data-price="2800">
+              <article class="card quest-card">
+                <div class="quest-cover">
+                  <img src="assets/images/archive.jpg" alt="Атмосферная иллюстрация квеста «Архив 13»" width="900" height="600" loading="lazy"><span class="quest-age">12+</span>
+                </div>
+                <div class="quest-body">
+                  <span class="quest-genre">Логика</span>
+                  <h3>
+                    Архив 13
+                  </h3>
+                  <p class="quest-description">
+                    Секретное дело спрятано среди сотен папок. Улики на виду, но только внимательная команда заметит их связь.
+                  </p>
+                  <div class="quest-meta">
+                    <span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6M22 21v-3a7 7 0 0 0-5-6"/></svg>2–4 игроков</span><span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>от 60 минут</span>
+                  </div>
+                  <div class="difficulty-row">
+                    <span>Сложность</span><span class="difficulty-bars" role="img" aria-label="Сложность: 2 из 5"><i class="filled"></i><i class="filled"></i><i class=""></i><i class=""></i><i class=""></i></span>
+                  </div>
+                  <div class="quest-bottom">
+                    <div class="quest-price">
+                      <strong>от 2 800 ₽</strong><small>за команду / час</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal" data-quest="archive" aria-label="Забронировать квест «Архив 13»">В игру <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 quest-item" data-genre="horror" data-price="4500">
+              <article class="card quest-card">
+                <div class="quest-cover">
+                  <img src="assets/images/house.jpg" alt="Атмосферная иллюстрация квеста «Дом без окон»" width="900" height="600" loading="lazy"><span class="quest-badge new">Новинка</span><span class="quest-age">18+</span>
+                </div>
+                <div class="quest-body">
+                  <span class="quest-genre">Хоррор</span>
+                  <h3>
+                    Дом без окон
+                  </h3>
+                  <p class="quest-description">
+                    Вы помните, как вошли, но входа больше нет. Следуйте знакам старого дома и не теряйте друг друга из виду.
+                  </p>
+                  <div class="quest-meta">
+                    <span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6M22 21v-3a7 7 0 0 0-5-6"/></svg>2–6 игроков</span><span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>от 60 минут</span>
+                  </div>
+                  <div class="difficulty-row">
+                    <span>Сложность</span><span class="difficulty-bars" role="img" aria-label="Сложность: 5 из 5"><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i><i class="filled"></i></span>
+                  </div>
+                  <div class="quest-bottom">
+                    <div class="quest-price">
+                      <strong>от 4 500 ₽</strong><small>за команду / час</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal" data-quest="house" aria-label="Забронировать квест «Дом без окон»">В игру <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-4 quest-item" data-genre="adventure" data-price="3000">
+              <article class="card quest-card">
+                <div class="quest-cover">
+                  <img src="assets/images/treasure.jpg" alt="Атмосферная иллюстрация квеста «Сокровища капитана»" width="900" height="600" loading="lazy"><span class="quest-age">10+</span>
+                </div>
+                <div class="quest-body">
+                  <span class="quest-genre">Приключения</span>
+                  <h3>
+                    Сокровища капитана
+                  </h3>
+                  <p class="quest-description">
+                    Карта ведёт в затерянную бухту. Соберите подсказки капитана и найдите тайник раньше охотников за сокровищами.
+                  </p>
+                  <div class="quest-meta">
+                    <span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><path d="M2 21v-3a7 7 0 0 1 14 0v3M16 4a3 3 0 0 1 0 6M22 21v-3a7 7 0 0 0-5-6"/></svg>2–6 игроков</span><span><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>от 60 минут</span>
+                  </div>
+                  <div class="difficulty-row">
+                    <span>Сложность</span><span class="difficulty-bars" role="img" aria-label="Сложность: 2 из 5"><i class="filled"></i><i class="filled"></i><i class=""></i><i class=""></i><i class=""></i></span>
+                  </div>
+                  <div class="quest-bottom">
+                    <div class="quest-price">
+                      <strong>от 3 000 ₽</strong><small>за команду / час</small>
+                    </div>
+                    <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal" data-quest="treasure" aria-label="Забронировать квест «Сокровища капитана»">В игру <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div id="quest-empty" class="empty-state" hidden>
+            <h3>
+              Эта история ещё не найдена
+            </h3>
+            <p>
+              Попробуйте другой жанр или увеличьте бюджет.
+            </p>
+            <button id="reset-filters" class="btn btn-outline-light" type="button">Сбросить фильтры</button>
+          </div>
+          <div class="help-strip">
+            <div>
+              <h3>
+                Сложно выбрать историю?
+              </h3>
+              <p>
+                Посмотрите правила и узнайте, чем отличаются жанры и уровни сложности.
+              </p>
+            </div>
+            <a class="btn btn-outline-light" href="rules.html">Разобраться в правилах <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+          </div>
+          <p class="demo-note mt-4">
+            Все квесты, цены и характеристики вымышлены. Фотографии — атмосферные иллюстрации. Учебная форма не проверяет реальную доступность помещений.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="navbar-brand" href="index.html" aria-label="KvestLabb — главная"><svg class="icon brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4l11-2v19M12 12h1"/></svg><span>Kvest<span class="accent">Labb</span></span></a>
+            <p class="footer-copy">
+              У каждого выхода есть история.<br>У каждой истории — своя команда.
+            </p>
+          </div>
+          <nav class="footer-nav" aria-labelledby="footer-nav-title">
+            <h2 class="footer-heading" id="footer-nav-title">Навигация</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Квесты</a></li>
+              <li><a href="rules.html">Правила</a></li>
+              <li><a href="schedule.html">Расписание</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <h2 class="footer-heading">На связи</h2>
+            <address class="footer-address">
+              <p class="footer-contact"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Москва, ул. Загадочная, 13</span></p>
+              <a class="footer-phone footer-contact" href="tel:+79099268067"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L9 10.7a16 16 0 0 0 4.3 4.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 2.7 3Z"/></svg><span>+79099268067</span></a>
+              <p class="footer-contact"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ежедневно · 10:00–23:00</span></p>
+              <a class="footer-email footer-contact" href="mailto:hello@kvestlabb.example"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>hello@kvestlabb.example</span></a>
+            </address>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copyright">© 2026 KvestLabb. Все права защищены</span>
+          <div class="footer-actions">
+            <button class="footer-cta" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal">Забронировать <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <a class="footer-back-top" href="#main">Наверх <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="booking-modal" tabindex="-1" aria-labelledby="booking-title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="booking-title">
+              Начнём твою историю
+            </h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <form id="booking-form" novalidate>
+              <p class="form-note">
+                Все поля обязательны. Это учебная заявка: данные не отправляются и не сохраняются.
+              </p>
+              <div class="mb-3">
+                <label class="form-label" for="booking-quest">Квест</label><select class="form-select" id="booking-quest" name="quest" required aria-describedby="booking-quest-error booking-quest-info"><option value="">Выберите квест</option><option value="alchemy">Кабинет алхимика</option><option value="signal">Последний сигнал</option><option value="polaris">Экспедиция «Полярис»</option><option value="archive">Архив 13</option><option value="house">Дом без окон</option><option value="treasure">Сокровища капитана</option></select>
+                <div class="form-text" id="booking-quest-info">
+                  Выберите квест, чтобы увидеть стоимость и размер команды.
+                </div>
+                <div class="invalid-feedback" id="booking-quest-error">
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-name">Ваше имя</label><input class="form-control" type="text" id="booking-name" name="booking-name" required autocomplete="name" maxlength="80" placeholder="Даниил" aria-describedby="booking-name-error">
+                  <div class="invalid-feedback" id="booking-name-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-phone">Телефон</label><input class="form-control" type="tel" id="booking-phone" name="booking-phone" required autocomplete="tel" maxlength="24" placeholder="+79099268067" aria-describedby="booking-phone-error">
+                  <div class="invalid-feedback" id="booking-phone-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-date">Дата игры</label><input class="form-control" type="date" id="booking-date" name="booking-date" required aria-describedby="booking-date-error">
+                  <div class="invalid-feedback" id="booking-date-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-players">Количество игроков</label><input class="form-control" type="number" id="booking-players" name="booking-players" required min="2" max="6" step="1" value="2" aria-describedby="booking-players-error">
+                  <div class="invalid-feedback" id="booking-players-error">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="booking-start">Начало</label><input class="form-control" type="time" id="booking-start" name="booking-start" required min="10:00" max="22:00" step="1800" aria-describedby="booking-start-error">
+                  <div class="invalid-feedback" id="booking-start-error">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="booking-end">Окончание</label><input class="form-control" type="time" id="booking-end" name="booking-end" required min="11:00" max="23:00" step="1800" aria-describedby="booking-end-error">
+                  <div class="invalid-feedback" id="booking-end-error">
+                  </div>
+                </div>
+              </div>
+              <p class="form-text mt-3">
+                Клуб открыт с 10:00 до 23:00. Минимум — 1 час, шаг времени — 30 минут. Начало и окончание в один день. Цена — за всю команду; более длинный интервал рассчитывается пропорционально.
+              </p>
+              <div class="booking-summary" aria-live="polite" aria-atomic="true">
+                <div>
+                  <small>Стоимость за команду</small><strong id="booking-total">—</strong>
+                </div>
+                <span class="booking-breakdown" id="booking-breakdown">Выберите квест и время</span>
+              </div>
+              <button class="btn btn-primary w-100" type="submit">Отправить заявку <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            </form>
+            <div class="success-view" id="booking-success" hidden>
+              <div class="success-symbol">
+                <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L20 5"/></svg>
+              </div>
+              <h3 tabindex="-1">
+                Команда, вы в игре!
+              </h3>
+              <p>
+                Учебная заявка сформирована.<br>Реального бронирования и отправки данных не происходит.
+              </p>
+              <p class="success-details" id="booking-details">
+              </p>
+              <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Готово</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <noscript>
+    <p class="container demo-note">
+      Включите JavaScript для работы меню, фильтров, вкладок, карусели, расписания и форм.
+    </p>
+    </noscript>
+  </body>
+</html>

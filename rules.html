@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11130f">
+    <meta name="description" content="KvestLabb: правила клуба. Учебный сайт квест-клуба — шесть историй, расписание и демонстрационное бронирование.">
+    <title>Правила клуба — KvestLabb</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/vendor/bootstrap/bootstrap.bundle.js" defer></script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/validation.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg" aria-label="Главная навигация">
+        <div class="container">
+          <a class="navbar-brand" href="index.html" aria-label="KvestLabb — главная"><svg class="icon brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4l11-2v19M12 12h1"/></svg><span>Kvest<span class="accent">Labb</span></span></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Открыть меню"><svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalog.html">Квесты</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="rules.html" aria-current="page">Правила</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="schedule.html">Расписание</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light nav-book" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal">Забронировать <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1">
+      <section class="page-heading">
+        <div class="container">
+          <nav aria-label="Хлебные крошки">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Правила
+              </li>
+            </ol>
+          </nav>
+          <div class="eyebrow">
+            KvestLabb / Правила
+          </div>
+          <h1>
+            Правила игры.<br>Без лишних сюрпризов.
+          </h1>
+          <p class="page-intro">
+            Несколько простых договорённостей, чтобы команда думала о загадках, а не об организационных вопросах.
+          </p>
+        </div>
+      </section>
+      <section class="pb-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+              <article class="card rule-card">
+                <span class="step-number">01</span>
+                <h2>
+                  Приходите заранее
+                </h2>
+                <p>
+                  Будьте на месте за 15 минут: познакомимся, проведём инструктаж и настроимся на игру.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="card rule-card">
+                <span class="step-number">02</span>
+                <h2>
+                  Берегите декорации
+                </h2>
+                <p>
+                  Не применяйте силу, не разбирайте предметы и не трогайте элементы с запрещающими отметками.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="card rule-card">
+                <span class="step-number">03</span>
+                <h2>
+                  Играйте командой
+                </h2>
+                <p>
+                  Слушайте друг друга, делитесь находками и сообщайте ведущему, если нужна помощь или перерыв.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <article class="card rule-card">
+                <span class="step-number">04</span>
+                <h2>
+                  Учитывайте ограничения
+                </h2>
+                <p>
+                  Соблюдайте возрастной рейтинг и допустимое число игроков. Участие в состоянии опьянения не допускается.
+                </p>
+              </article>
+            </div>
+          </div>
+          <p class="demo-note mt-4">
+            Возрастные ограничения и состав команды указаны в карточке каждого квеста.
+          </p>
+        </div>
+      </section>
+      <section class="section section-line">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <div class="eyebrow">
+                Найдём подходящий формат
+              </div>
+              <h2>
+                Жанр задаёт тон.<br>Команда — темп.
+              </h2>
+              <p class="mt-4">
+                Сложность и степень напряжения — разные вещи. Выбирайте историю по обоим параметрам.
+              </p>
+            </div>
+            <div class="col-lg-8">
+              <div class="accordion" id="genres-accordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#genres-accordion-0" aria-expanded="true" aria-controls="genres-accordion-0">Логика — замечать связи</button>
+                  </h3>
+                  <div class="accordion-collapse collapse show" id="genres-accordion-0" data-bs-parent="#genres-accordion">
+                    <div class="accordion-body">
+                      Здесь главное — внимание, наблюдательность и умение соединять факты. Для первого знакомства подойдёт «Архив 13», а «Кабинет алхимика» предложит более длинные цепочки загадок.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genres-accordion-1" aria-expanded="false" aria-controls="genres-accordion-1">Хоррор — справляться с неизвестностью</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="genres-accordion-1" data-bs-parent="#genres-accordion">
+                    <div class="accordion-body">
+                      Тревожная атмосфера и неожиданные повороты. «Последний сигнал» рассчитан на участников от 16 лет, «Дом без окон» — от 18 лет. Если станет некомфортно, сообщите ведущему и остановите игру.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genres-accordion-2" aria-expanded="false" aria-controls="genres-accordion-2">Приключения — исследовать вместе</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="genres-accordion-2" data-bs-parent="#genres-accordion">
+                    <div class="accordion-body">
+                      Поиск, открытия и понятная общая цель. «Сокровища капитана» доступны от 10 лет, «Экспедиция «Полярис»» — от 12 лет. Для детей младше 14 лет требуется взрослый участник.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genres-accordion-3" aria-expanded="false" aria-controls="genres-accordion-3">Сложность 1–2 из 5: первый опыт</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="genres-accordion-3" data-bs-parent="#genres-accordion">
+                    <div class="accordion-body">
+                      Подсказки хорошо заметны, задачи идут последовательно. Подходит начинающим и семейным командам. В каталоге это «Архив 13» и «Сокровища капитана».
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genres-accordion-4" aria-expanded="false" aria-controls="genres-accordion-4">Сложность 3 из 5: есть над чем подумать</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="genres-accordion-4" data-bs-parent="#genres-accordion">
+                    <div class="accordion-body">
+                      Нужно сопоставлять несколько находок и распределять задачи между участниками. Такой уровень у «Кабинета алхимика» и «Экспедиции «Полярис»».
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#genres-accordion-5" aria-expanded="false" aria-controls="genres-accordion-5">Сложность 4–5 из 5: вызов команде</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="genres-accordion-5" data-bs-parent="#genres-accordion">
+                    <div class="accordion-body">
+                      Многоступенчатые загадки требуют концентрации. У «Последнего сигнала» — 4 из 5, у «Дома без окон» — 5 из 5. Подсказки доступны на любом уровне.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section-line">
+        <div class="container">
+          <div class="row g-5">
+            <div class="col-lg-4">
+              <div class="eyebrow">
+                Перед первой игрой
+              </div>
+              <h2>
+                Вопросы,<br>которые возникают.
+              </h2>
+              <p class="mt-4">
+                Здесь подсказку можно получить ещё до начала квеста.
+              </p>
+            </div>
+            <div class="col-lg-8">
+              <div class="accordion" id="faq-accordion">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-0" aria-expanded="true" aria-controls="faq-accordion-0">Можно ли прийти с детьми?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse show" id="faq-accordion-0" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Да, на приключения с подходящим возрастным рейтингом. Самый младший возраст в каталоге — 10 лет для «Сокровищ капитана». До 14 лет в команде должен быть взрослый. На хорроры действуют отдельные ограничения 16+ и 18+.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-1" aria-expanded="false" aria-controls="faq-accordion-1">Что делать, если мы опаздываем?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="faq-accordion-1" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      В условиях учебного клуба при опоздании до 15 минут время игры может быть сокращено. При большем опоздании перенос согласуется с ведущим и зависит от следующего сеанса. Заранее планируйте дорогу и приходите за 15 минут.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-2" aria-expanded="false" aria-controls="faq-accordion-2">Есть ли подсказки?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="faq-accordion-2" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Да. Ведущий наблюдает за прохождением и помогает по запросу. Подсказки входят в стоимость и нужны для того, чтобы команда продолжала получать удовольствие от игры.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-3" aria-expanded="false" aria-controls="faq-accordion-3">Сколько длится игра и как считается цена?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="faq-accordion-3" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Минимальный интервал — один час, он же базовая длительность игры. В учебной форме можно выбрать более длинный интервал с шагом 30 минут: ставка за команду умножается на число часов. Например, 3 200 ₽ × 1,5 часа = 4 800 ₽.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-4" aria-expanded="false" aria-controls="faq-accordion-4">Можно ли выйти во время квеста?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="faq-accordion-4" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Да. Участник может попросить остановить игру и выйти в любой момент. Если вам некомфортно, сразу сообщите ведущему. Игровая задача не должна мешать возможности прекратить участие.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-5" aria-expanded="false" aria-controls="faq-accordion-5">Можно ли отменить или перенести заявку?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="faq-accordion-5" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Заявки на этом сайте демонстрационные и не создают реальную бронь, поэтому отмена не требуется. В примере правил клуба перенос согласуется заранее, не позднее чем за 24 часа до начала.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-accordion-6" aria-expanded="false" aria-controls="faq-accordion-6">Какая одежда подойдёт?</button>
+                  </h3>
+                  <div class="accordion-collapse collapse" id="faq-accordion-6" data-bs-parent="#faq-accordion">
+                    <div class="accordion-body">
+                      Удобная одежда и обувь, в которых легко перемещаться. Специальная физическая подготовка не требуется. Крупные вещи лучше оставить вне игровой зоны.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="help-strip">
+            <div>
+              <h3>
+                Готовы проверить себя?
+              </h3>
+              <p>
+                Выберите историю и удобное время для команды.
+              </p>
+            </div>
+            <a class="btn btn-outline-light" href="schedule.html">К расписанию <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="navbar-brand" href="index.html" aria-label="KvestLabb — главная"><svg class="icon brand-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21h16M7 21V4l11-2v19M12 12h1"/></svg><span>Kvest<span class="accent">Labb</span></span></a>
+            <p class="footer-copy">
+              У каждого выхода есть история.<br>У каждой истории — своя команда.
+            </p>
+          </div>
+          <nav class="footer-nav" aria-labelledby="footer-nav-title">
+            <h2 class="footer-heading" id="footer-nav-title">Навигация</h2>
+            <ul class="footer-links">
+              <li><a href="index.html">Главная</a></li>
+              <li><a href="catalog.html">Квесты</a></li>
+              <li><a href="rules.html">Правила</a></li>
+              <li><a href="schedule.html">Расписание</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="footer-contacts">
+            <h2 class="footer-heading">На связи</h2>
+            <address class="footer-address">
+              <p class="footer-contact"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Москва, ул. Загадочная, 13</span></p>
+              <a class="footer-phone footer-contact" href="tel:+79099268067"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L9 10.7a16 16 0 0 0 4.3 4.3l1.3-1.3a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 2.7 3Z"/></svg><span>+79099268067</span></a>
+              <p class="footer-contact"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Ежедневно · 10:00–23:00</span></p>
+              <a class="footer-email footer-contact" href="mailto:hello@kvestlabb.example"><svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>hello@kvestlabb.example</span></a>
+            </address>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span class="footer-copyright">© 2026 KvestLabb. Все права защищены</span>
+          <div class="footer-actions">
+            <button class="footer-cta" type="button" data-bs-toggle="modal" data-bs-target="#booking-modal">Забронировать <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            <a class="footer-back-top" href="#main">Наверх <span aria-hidden="true">↑</span></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="modal fade" id="booking-modal" tabindex="-1" aria-labelledby="booking-title" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="booking-title">
+              Начнём твою историю
+            </h2>
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <form id="booking-form" novalidate>
+              <p class="form-note">
+                Все поля обязательны. Это учебная заявка: данные не отправляются и не сохраняются.
+              </p>
+              <div class="mb-3">
+                <label class="form-label" for="booking-quest">Квест</label><select class="form-select" id="booking-quest" name="quest" required aria-describedby="booking-quest-error booking-quest-info"><option value="">Выберите квест</option><option value="alchemy">Кабинет алхимика</option><option value="signal">Последний сигнал</option><option value="polaris">Экспедиция «Полярис»</option><option value="archive">Архив 13</option><option value="house">Дом без окон</option><option value="treasure">Сокровища капитана</option></select>
+                <div class="form-text" id="booking-quest-info">
+                  Выберите квест, чтобы увидеть стоимость и размер команды.
+                </div>
+                <div class="invalid-feedback" id="booking-quest-error">
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-name">Ваше имя</label><input class="form-control" type="text" id="booking-name" name="booking-name" required autocomplete="name" maxlength="80" placeholder="Даниил" aria-describedby="booking-name-error">
+                  <div class="invalid-feedback" id="booking-name-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-phone">Телефон</label><input class="form-control" type="tel" id="booking-phone" name="booking-phone" required autocomplete="tel" maxlength="24" placeholder="+79099268067" aria-describedby="booking-phone-error">
+                  <div class="invalid-feedback" id="booking-phone-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-date">Дата игры</label><input class="form-control" type="date" id="booking-date" name="booking-date" required aria-describedby="booking-date-error">
+                  <div class="invalid-feedback" id="booking-date-error">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="booking-players">Количество игроков</label><input class="form-control" type="number" id="booking-players" name="booking-players" required min="2" max="6" step="1" value="2" aria-describedby="booking-players-error">
+                  <div class="invalid-feedback" id="booking-players-error">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="booking-start">Начало</label><input class="form-control" type="time" id="booking-start" name="booking-start" required min="10:00" max="22:00" step="1800" aria-describedby="booking-start-error">
+                  <div class="invalid-feedback" id="booking-start-error">
+                  </div>
+                </div>
+                <div class="col-6">
+                  <label class="form-label" for="booking-end">Окончание</label><input class="form-control" type="time" id="booking-end" name="booking-end" required min="11:00" max="23:00" step="1800" aria-describedby="booking-end-error">
+                  <div class="invalid-feedback" id="booking-end-error">
+                  </div>
+                </div>
+              </div>
+              <p class="form-text mt-3">
+                Клуб открыт с 10:00 до 23:00. Минимум — 1 час, шаг времени — 30 минут. Начало и окончание в один день. Цена — за всю команду; более длинный интервал рассчитывается пропорционально.
+              </p>
+              <div class="booking-summary" aria-live="polite" aria-atomic="true">
+                <div>
+                  <small>Стоимость за команду</small><strong id="booking-total">—</strong>
+                </div>
+                <span class="booking-breakdown" id="booking-breakdown">Выберите квест и время</span>
+              </div>
+              <button class="btn btn-primary w-100" type="submit">Отправить заявку <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+            </form>
+            <div class="success-view" id="booking-success" hidden>
+              <div class="success-symbol">
+                <svg class="icon " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L20 5"/></svg>
+              </div>
+              <h3 tabindex="-1">
+                Команда, вы в игре!
+              </h3>
+              <p>
+                Учебная заявка сформирована.<br>Реального бронирования и отправки данных не происходит.
+              </p>
+              <p class="success-details" id="booking-details">
+              </p>
+              <button class="btn btn-primary" type="button" data-bs-dismiss="modal">Готово</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <noscript>
+    <p class="container demo-note">
+      Включите JavaScript для работы меню, фильтров, вкладок, карусели, расписания и форм.
+    </p>
+    </noscript>
+  </body>
+</html>
